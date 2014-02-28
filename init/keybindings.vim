@@ -15,17 +15,16 @@ vmap <leader>s :s/
 " Split screen
 map <leader>v :vsp<CR>
 
-" File navigation
-map <leader>e :e
-" map \ :Explore<CR>
-
 " Directory browsing
 map <leader>b :bnext<CR>
+map <leader>e :b#<CR>
 
 " Git
 map <leader>g :Gblame<CR>
 
 " copy file path to system clipboard
+" " Copy current file path to system pasteboard
+map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
 " reload vimrc

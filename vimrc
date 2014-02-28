@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 
 " syntax
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
@@ -26,12 +27,15 @@ Bundle 'chrisbra/csv.vim'
 Bundle 'moll/vim-node'
 Bundle 'vim-scripts/vtreeexplorer'
 Bundle 'kien/ctrlp.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
+Bundle 'slim-template/vim-slim'
+Bundle 'ervandew/supertab'
 
 
 filetype plugin indent on
 set background=dark
 colorscheme solarized
-
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
@@ -49,7 +53,7 @@ set guifont=Inconsolata\ for\ Powerline:h18
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-syntax on
+syntax enable
 
 " Turn Off Swap Files
 set noswapfile
@@ -87,3 +91,6 @@ runtime! init/**.vim
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" autosave when focus is lost
+:au FocusLost * silent! wa
