@@ -2,13 +2,13 @@ set nocompatible               " be iMproved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 " git
@@ -32,9 +32,11 @@ Bundle 'groenewege/vim-less'
 Bundle 'slim-template/vim-slim'
 Bundle 'ervandew/supertab'
 
+call vundle#end()
+
 
 filetype plugin indent on
-set background=dark
+set background=light
 colorscheme solarized
 
 set number                      "Line numbers are good
@@ -46,7 +48,15 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+" Powerline
 set guifont=Inconsolata\ for\ Powerline:h18
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
