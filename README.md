@@ -3,7 +3,7 @@ vim
 
     brew install macvim
     git clone https://github.com/rheaton/vim ~/.vim
-    ln ~/.vimrc ~/.vim/vimrc
+    ln ~/.vim/vimrc ~/.vimrc
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 In macvim:
