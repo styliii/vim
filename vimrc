@@ -31,6 +31,8 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
 Bundle 'slim-template/vim-slim'
 Bundle 'ervandew/supertab'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 call vundle#end()
 
@@ -38,6 +40,7 @@ call vundle#end()
 filetype plugin indent on
 set background=light
 colorscheme solarized
+let g:solarized_termcolors=256
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
@@ -47,6 +50,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set incsearch                   "Shows the first match when searching"
 
 " Powerline
 set guifont=Inconsolata\ for\ Powerline:h18
@@ -95,6 +99,7 @@ set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
+runtime macros/matchit.vim
 runtime! init/**.vim
 
 " source a .vimrc.local if there is one

@@ -2,7 +2,7 @@ vim
 ===
 
     brew install macvim
-    git clone https://github.com/rheaton/vim ~/.vim
+    git clone https://github.com/styliii/vim ~/.vim
     ln ~/.vim/vimrc ~/.vimrc
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
