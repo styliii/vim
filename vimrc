@@ -11,6 +11,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ngmy/vim-rubocop'
+Bundle 'wesQ3/vim-windowswap'
+
 " git
 Bundle 'tpope/vim-fugitive'
 
@@ -33,6 +36,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'ervandew/supertab'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'tpope/vim-surround'
 
 call vundle#end()
 
@@ -41,6 +45,8 @@ filetype plugin indent on
 set background=light
 colorscheme solarized
 let g:solarized_termcolors=256
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
@@ -109,3 +115,8 @@ endif
 
 " autosave when focus is lost
 :au FocusLost * silent! wa
+
+" http://blog.dcxn.com/2013/10/18/faster-vim-searching-for-rails-projects/
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+set rtp+=~/.fzf
