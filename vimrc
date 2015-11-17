@@ -18,6 +18,7 @@ Bundle 'wesQ3/vim-windowswap'
 Bundle 'tpope/vim-fugitive'
 
 " syntax
+Plugin 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-endwise'
@@ -37,6 +38,7 @@ Bundle 'ervandew/supertab'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-surround'
+Bundle 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -64,7 +66,7 @@ let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+" set term=xterm-256color
 set termencoding=utf-8
 
 
@@ -120,3 +122,10 @@ endif
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 set rtp+=~/.fzf
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ["eslint"]
+
