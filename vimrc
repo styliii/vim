@@ -121,7 +121,7 @@ endif
 " http://blog.dcxn.com/2013/10/18/faster-vim-searching-for-rails-projects/
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
