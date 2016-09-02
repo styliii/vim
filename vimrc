@@ -13,6 +13,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ngmy/vim-rubocop'
 Bundle 'wesQ3/vim-windowswap'
+Bundle 'ecomba/vim-ruby-refactoring'
 
 " git
 Bundle 'tpope/vim-fugitive'
