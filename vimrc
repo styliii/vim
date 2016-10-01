@@ -40,6 +40,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
+Bundle 'easymotion/vim-easymotion'
 
 call vundle#end()
 
